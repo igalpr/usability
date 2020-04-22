@@ -1,0 +1,5 @@
+<%= rmp_render_previous('attachments/upload', __FILE__, false) %>
+
+<% unless @attachment.new_record? %>
+  fileSpan.find('.filename').val(fileSpan.find('.filename').val().split(' ').join('_'));
+<% end %>

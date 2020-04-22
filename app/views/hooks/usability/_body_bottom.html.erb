@@ -1,0 +1,15 @@
+<% if @us_add_async_tabs && @project %>
+  <%
+    all_tabs = project_settings_tabs_without_usability
+    r = all_tabs.select { |it| it[:name] == 'info' || it[:name] == params[:tab] }
+    r = [all_tabs.first] if r.blank?
+    all_tabs.reject! { |it| r.include?(it) }
+  %>
+  <% if all_tabs.present? %>
+    <script type="text/javascript" charset="utf-8">
+      <% all_tabs.each do |tab| %>
+        RMPlus.Usability.add_async_project_tab('<%= tab[:name] %>', '<%= @project.identifier %>');
+      <% end %>
+    </script>
+  <% end %>
+<% end %>
