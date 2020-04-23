@@ -4,7 +4,7 @@ module Usability
       base.send(:include, InstanceMethods)
 
       base.class_eval do
-        alias_method :retrieve_previous_and_next_issue_ids, :usability
+        alias_attribute :retrieve_previous_and_next_issue_ids, :usability
 
         before_action :us_set_flag, only: [:update, :show, :destroy]
       end

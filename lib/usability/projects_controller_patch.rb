@@ -7,7 +7,7 @@ module Usability
       base.class_eval do
         include ActionView::Helpers::FormOptionsHelper
         skip_before_action :authorize, only: [:not_member_principal]
-        alias_method :settings, :usability
+        alias_attribute :settings, :usability
       end
     end
 

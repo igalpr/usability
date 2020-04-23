@@ -4,7 +4,7 @@ module Usability
       base.send :include, InstanceMethods
 
       base.class_eval do
-        alias_method :save_attachments, :usability
+        alias_attribute :save_attachments, :usability
       end
     end
 

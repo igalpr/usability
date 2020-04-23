@@ -4,7 +4,7 @@ module Usability
       base.send :include, InstanceMethods
 
       base.class_eval do
-        alias_method :project_settings_tabs, :usability
+        alias_attribute :project_settings_tabs, :usability
       end
     end
 

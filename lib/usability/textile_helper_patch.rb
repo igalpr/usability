@@ -3,8 +3,8 @@ module Usability
     def self.included(base)
       base.send(:include, InstanceMethods)
       base.class_eval do
-        alias_method :wikitoolbar_for, :us
-        alias_method :heads_for_wiki_formatter, :us
+        alias_attribute :wikitoolbar_for, :us
+        alias_attribute :heads_for_wiki_formatter, :us
       end
     end
   end

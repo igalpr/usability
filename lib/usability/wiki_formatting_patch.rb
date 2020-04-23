@@ -4,7 +4,7 @@ module Usability
       base.extend(ClassMethods)
       base.class_eval do
         class << self
-          alias_method :to_html, :usability
+          alias_attribute :to_html, :usability
         end
       end
     end
