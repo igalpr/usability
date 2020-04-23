@@ -4,12 +4,12 @@ module Usability
       base.send(:include, InstanceMethods)
 
       base.class_eval do
-        alias_method_chain :page_header_title, :usability
-        alias_method_chain :progress_bar, :usability
-        alias_method_chain :render_project_jump_box, :usability
-        alias_method_chain :authoring, :usability
-        alias_method_chain :time_tag, :usability
-        alias_method_chain :javascript_heads, :usability
+        alias_method :page_header_title, :usability
+        alias_method :progress_bar, :usability
+        alias_method :render_project_jump_box, :usability
+        alias_method :authoring, :usability
+        alias_method :time_tag, :usability
+        alias_method :javascript_heads, :usability
       end
 
     end

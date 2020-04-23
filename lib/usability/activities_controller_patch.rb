@@ -4,7 +4,7 @@ module Usability
       base.send(:include, InstanceMethods)
 
       base.class_eval do
-        alias_method_chain :index, :usability
+        alias_method :index, :usability
       end
     end
 

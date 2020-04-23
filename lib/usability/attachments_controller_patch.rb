@@ -7,7 +7,7 @@ module Usability
       base.send(:include, InstanceMethods)
 
       base.class_eval do
-        alias_method_chain :upload, :usability
+        alias_method :upload, :usability
       end
     end
 

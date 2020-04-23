@@ -5,7 +5,7 @@ module Usability
 
       base.class_eval do
         class << self
-          alias_method_chain :find_all_givable, :usability
+          alias_method :find_all_givable, :usability
         end
       end
     end

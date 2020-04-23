@@ -4,7 +4,7 @@ module Usability
       base.send(:include, InstanceMethods)
 
       base.class_eval do
-        alias_method_chain :link_to_attachments, :usability
+        alias_method :link_to_attachments, :usability
       end
     end
 
